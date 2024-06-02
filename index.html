@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Masa Corporal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container" id="formulario">
+        <h1>Calculadora de Masa Corporal</h1>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" placeholder="Tu edad">
+        <br>
+        <label for="altura">Altura (cm):</label>
+        <input type="number" id="altura" placeholder="Altura en cm">
+        <br>
+        <label for="peso">Peso (kg):</label>
+        <input type="number" id="peso" placeholder="Peso en kg">
+        <br>
+        <label for="sexo">Sexo:</label>
+        <select id="sexo">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+        </select>
+        <br>
+        <button onclick="calcularMasaCorporal()">Calcular Masa Corporal</button>
+    </div>
+
+    <div class="container" id="resultado" style="display: none;">
+        <h1>Resultado de IMC</h1>
+        <div class="chart-container">
+            <canvas id="imcChart"></canvas>
+        </div>
+        <div class="tips" id="tips"></div>
+        <button onclick="volver()">Volver</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
